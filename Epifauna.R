@@ -15,12 +15,12 @@
 
 # This script includes code for running Random Forest models (a quick look-see),
 # but the accompanying files: 
-#  ClusterModel_2025.R and
-#  ContinuousVariablesModel_2025.R 
+#  Epifauna_ClusterModel_2025.R and
+#  Epifauna_ContinuousVariablesModel_2025.R 
 # should be used for final modelling.
 
 # The input data file for modelling is produced in this script and is named 
-# 'poseidon_trawl_metrics_4_modelling.csv'
+# 'Trawl_Epifauna_25112025.csv'
 
 #_______________________________________________________________________________
 #### GET DATA ####
@@ -1761,7 +1761,7 @@ data4mod$metric[data4mod$metric =="N_sqrt"] <- "N_trans" # update metric name
 View(data4mod)
 
 ## Save file for use with modelling scripts
-write.csv(data4mod, "C:\\Users\\KMC00\\OneDrive - CEFAS\\R_PROJECTS\\OneBenthicTrawl\\OUTPUTS\\poseidon_trawl_metrics_4_modelling.csv", row.names=FALSE)
+write.csv(data4mod, "C:\\Users\\KMC00\\OneDrive - CEFAS\\R_PROJECTS\\OneBenthicTrawl\\OUTPUTS\\Trawl_Epifauna_25112025.csv", row.names=FALSE)
 #_______________________________________________________________________________
 #### ASSEMBLAGES: OUTPUT DATA FOR SIMPER ANALYSIS USING PRIMER ####
 
@@ -3462,3 +3462,4 @@ ggsave(plot = import_var,
        filename = paste0("C:\\Users\\KMC00\\OneDrive - CEFAS\\R_PROJECTS\\OneBenthicTrawl\\OUTPUTS\\Figure_S4.tif"),
        height = 250, width =350,units = "mm", dpi = 500,
        device = "tiff",limitsize = FALSE,bg="white")
+
